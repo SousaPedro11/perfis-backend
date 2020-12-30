@@ -46,12 +46,15 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'drf_generators',
-    # 'corsheaders',
-    # 'django_extensions',
-    # 'faker',
-    # 'factory',
-    # 'drf_yasg',
-    # 'django_filters',
+    'corsheaders',
+    'django_extensions',
+    'faker',
+    'factory',
+    'drf_yasg',
+    'django_filters',
+
+    'app',
+    'api',
 
 ]
 
