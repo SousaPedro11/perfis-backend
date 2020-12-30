@@ -5,12 +5,27 @@ name = "pypi"
 
 [packages]
 django = "*"
+python-dotenv = "*"
+requests = "*"
 djangorestframework = "*"
 markdown = "*"
-python-dotenv = "*"
+django-filter = "*"
+psycopg2-binary = "*"
 drf-generators = "*"
+pytest = "*"
+pytest-django = "*"
+gunicorn = "*"
+django-cors-headers = "*"
+django-extensions = "*"
+faker = "*"
+factory-boy = "*"
+drf-yasg = "*"
+pyyaml = "*"
+django-heroku = "*"
+mysqlclient = "*"
 
 [dev-packages]
+autopep8 = "*"
 
 [requires]
 python_version = "3.9"
