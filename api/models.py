@@ -38,7 +38,7 @@ class Pessoa(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=100, null=False, blank=False)
     sobrenome = models.CharField(max_length=100, null=False, blank=False)
-    endereco = models.ForeignKey('Endereco', null=True, on_delete=models.PROTECT)
+    endereco = models.ForeignKey('Endereco', null=False, on_delete=models.PROTECT)
 
     class Meta:
         abstract = True

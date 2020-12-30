@@ -1,0 +1,850 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/v1/endereco/:
+    get:
+      operationId: listEnderecos
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Endereco'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createEndereco
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Endereco'
+          description: ''
+      tags:
+      - api
+  /api/v1/endereco/{id}/:
+    get:
+      operationId: retrieveEndereco
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Endereco.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Endereco'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateEndereco
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Endereco.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Endereco'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateEndereco
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Endereco.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Endereco'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Endereco'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyEndereco
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Endereco.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/v1/curso/:
+    get:
+      operationId: listCursos
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Curso'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createCurso
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Curso'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Curso'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Curso'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Curso'
+          description: ''
+      tags:
+      - api
+  /api/v1/curso/{id}/:
+    get:
+      operationId: retrieveCurso
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Curso.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Curso'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateCurso
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Curso.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Curso'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Curso'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Curso'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Curso'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateCurso
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Curso.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Curso'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Curso'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Curso'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Curso'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyCurso
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Curso.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/v1/pessoacurso/:
+    get:
+      operationId: listPessoaCursos
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PessoaCurso'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createPessoaCurso
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PessoaCurso'
+          description: ''
+      tags:
+      - api
+  /api/v1/pessoacurso/{id}/:
+    get:
+      operationId: retrievePessoaCurso
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this PessoaCurso.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PessoaCurso'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updatePessoaCurso
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this PessoaCurso.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PessoaCurso'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdatePessoaCurso
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this PessoaCurso.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PessoaCurso'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PessoaCurso'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyPessoaCurso
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this PessoaCurso.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/v1/profissional/:
+    get:
+      operationId: listProfissionals
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Profissional'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createProfissional
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profissional'
+          description: ''
+      tags:
+      - api
+  /api/v1/profissional/{id}/:
+    get:
+      operationId: retrieveProfissional
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Profissional.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profissional'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateProfissional
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Profissional.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profissional'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateProfissional
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Profissional.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profissional'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profissional'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyProfissional
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Profissional.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/v1/perfil/:
+    get:
+      operationId: listPerfils
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Perfil'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createPerfil
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Perfil'
+          description: ''
+      tags:
+      - api
+  /api/v1/perfil/{id}/:
+    get:
+      operationId: retrievePerfil
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Perfil.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Perfil'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updatePerfil
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Perfil.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Perfil'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdatePerfil
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Perfil.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Perfil'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Perfil'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyPerfil
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Perfil.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    Endereco:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        logradouro:
+          type: string
+          maxLength: 50
+        numero:
+          type: string
+          nullable: true
+          maxLength: 10
+        bairro:
+          type: string
+          maxLength: 50
+        cidade:
+          type: string
+          maxLength: 50
+      required:
+      - logradouro
+      - bairro
+      - cidade
+    Curso:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        curso_nome:
+          type: string
+          maxLength: 100
+      required:
+      - curso_nome
+    PessoaCurso:
+      type: object
+      properties:
+        curso:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            curso_nome:
+              type: string
+              maxLength: 100
+          required:
+          - curso_nome
+          readOnly: true
+        profissional:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            formacao:
+              type: string
+              readOnly: true
+            residencia:
+              type: string
+              readOnly: true
+            nome:
+              type: string
+              maxLength: 100
+            sobrenome:
+              type: string
+              maxLength: 100
+            habilidades:
+              type: string
+              nullable: true
+            experiencia:
+              type: string
+              nullable: true
+            endereco:
+              type: integer
+              writeOnly: true
+            curso:
+              type: integer
+              writeOnly: true
+              nullable: true
+          required:
+          - nome
+          - sobrenome
+          - endereco
+          readOnly: true
+    Profissional:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        formacao:
+          type: string
+          readOnly: true
+        residencia:
+          type: string
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 100
+        sobrenome:
+          type: string
+          maxLength: 100
+        habilidades:
+          type: string
+          nullable: true
+        experiencia:
+          type: string
+          nullable: true
+        endereco:
+          type: integer
+          writeOnly: true
+        curso:
+          type: integer
+          writeOnly: true
+          nullable: true
+      required:
+      - nome
+      - sobrenome
+      - endereco
+    Perfil:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        profissional:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            formacao:
+              type: string
+              readOnly: true
+            residencia:
+              type: string
+              readOnly: true
+            nome:
+              type: string
+              maxLength: 100
+            sobrenome:
+              type: string
+              maxLength: 100
+            habilidades:
+              type: string
+              nullable: true
+            experiencia:
+              type: string
+              nullable: true
+            endereco:
+              type: integer
+              writeOnly: true
+            curso:
+              type: integer
+              writeOnly: true
+              nullable: true
+          required:
+          - nome
+          - sobrenome
+          - endereco
+        email:
+          type: string
+          format: email
+          maxLength: 254
+      required:
+      - profissional
+      - email
