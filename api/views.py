@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from api.serializers import EnderecoSerializer, CursoSerializer, ProfissionalSerializer, PerfilSerializer
-from api.models import Endereco, Curso, Profissional, Perfil
+from api.serializers import EnderecoSerializer, CursoSerializer, PessoaCursoSerializer, ProfissionalSerializer, PerfilSerializer
+from api.models import Endereco, Curso, PessoaCurso, Profissional, Perfil
 
 
 class EnderecoViewSet(ModelViewSet):
@@ -11,6 +11,11 @@ class EnderecoViewSet(ModelViewSet):
 class CursoViewSet(ModelViewSet):
     queryset = Curso.objects.order_by('pk')
     serializer_class = CursoSerializer
+
+
+class PessoaCursoViewSet(ModelViewSet):
+    queryset = PessoaCurso.objects.order_by('pk')
+    serializer_class = PessoaCursoSerializer
 
 
 class ProfissionalViewSet(ModelViewSet):

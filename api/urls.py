@@ -6,6 +6,7 @@ router = SimpleRouter()
 
 router.register(r'endereco', views.EnderecoViewSet)
 router.register(r'curso', views.CursoViewSet)
+router.register(r'pessoacurso', views.PessoaCursoViewSet)
 router.register(r'profissional', views.ProfissionalViewSet)
 router.register(r'perfil', views.PerfilViewSet)
 

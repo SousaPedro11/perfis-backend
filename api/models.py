@@ -16,10 +16,13 @@ class Endereco(models.Model):
         verbose_name = "Endereco"
         verbose_name_plural = "Enderecos"
 
+    def __str__(self):
+        return f'{self.logradouro}, {self.numero} - {self.bairro} - {self.cidade}'
+
 
 class Curso(models.Model):
     id = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, null=False, blank=False)
+    curso_nome = models.CharField(max_length=100, null=False, blank=False)
 
     class Meta:
         db_table = 'tbl_curso'
@@ -27,20 +30,37 @@ class Curso(models.Model):
         verbose_name = "Curso"
         verbose_name_plural = "Cursos"
 
+    def __str__(self):
+        return self.curso_nome
+
 
 class Pessoa(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=100, null=False, blank=False)
     sobrenome = models.CharField(max_length=100, null=False, blank=False)
+    endereco = models.ForeignKey('Endereco', null=True, on_delete=models.PROTECT)
 
     class Meta:
         abstract = True
 
 
+class PessoaCurso(models.Model):
+    id = models.AutoField(primary_key=True)
+    profissional = models.ForeignKey('Profissional', on_delete=models.PROTECT, null=False)
+    curso = models.ForeignKey('Curso', on_delete=models.PROTECT, null=True)
+
+    class Meta:
+        db_table = 'tbl_pessoa_curso'
+        managed = True
+        verbose_name = "PessoaCurso"
+        verbose_name_plural = "PessoaCursos"
+        unique_together = ('profissional', 'curso',)
+
+
 class Profissional(Pessoa):
-    formacao = models.ManyToManyField('Curso', db_table='tbl_pessoa_curso')
     habilidades = models.TextField(blank=True, null=True)
     experiencia = models.TextField(blank=True, null=True)
+    curso = models.ForeignKey('Curso', on_delete=models.PROTECT, null=True)
 
     class Meta:
         db_table = 'tbl_profissional'
